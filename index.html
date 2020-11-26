@@ -17,57 +17,67 @@
 				<img src="images/logoretrocamera.jpg" alt="Retro Camera">
 			</a>
 
-		<nav>
-			<button type="button">Navigatie</button>
-
-			
-				<ul>
+	<div class="header">
+		<button type="menu" class="hamburgermenu"></button>
+		<a href=""><img src="images/screenshot/search.png" alt=""></a>
+		<a href=""><img class="kleinericon" src="images/screenshot/account.png" alt=""></a>
+		<a href=""><img src="images/screenshot/cart.png" alt=""></a>
+	</div>
+	
+		<nav class="navbar">
+				<ul class="lijstje">
 <!-- Instant camera's begin -->
 					<li>
-						<a href="">INSTANT FILM</a>
+						<div class="">
+							<button class="menubutton">INSTANT FILM</button>
+							<div class="menuinhoud">
+								<a class="menutitel" href="" title="POLAROID">POLAROID</a>
 							
-								<a href="" title="POLAROID">POLAROID</a>
-							
-							<ul>
-								<li>
-									<a href="" title="Polaroid 600-serie">Polaroid 600-serie</a>
-								</li>
-								<li>
-									<a href="" title="Polaroid SX-70-serie">Polaroid SX-70-serie</a>
-								</li>
-								<li>
-									<a href="" title="Polaroid Image/Spectra-serie">Polaroid Image/Spectra-serie</a>
-								</li>
-								<li>
-									<a href="" title="Polaroid i-type-serie">Polaroid i-type-serie</a>
-								</li>
-								<li>
-									<a href="" title="8x10 cameras">8x10" camera's</a>
-								</li>
-							</ul>
+								<ul class="">
+									<li>
+										<a href="" title="Polaroid 600-serie">Polaroid 600-serie</a>
+									</li>
+									<li>
+										<a href="" title="Polaroid SX-70-serie">Polaroid SX-70-serie</a>
+									</li>
+									<li>
+										<a href="" title="Polaroid Image/Spectra-serie">Polaroid Image/Spectra-serie</a>
+									</li>
+									<li>
+										<a href="" title="Polaroid i-type-serie">Polaroid i-type-serie</a>
+									</li>
+									<li>
+										<a href="" title="8x10 cameras">8x10" camera's</a>
+									</li>
+								</ul>
+
+					
 
 							
-								<a href="" title="FUJIFILM INSTAX">FUJIFILM INSTAX</a>
+								<a class="menutitel" href="" title="FUJIFILM INSTAX">FUJIFILM INSTAX</a>
 							
-							<ul>
-								<li>
-									<a href="" title="Mini">Mini</a>
-								</li>
-								<li>
-									<a href="" title="square">Square</a>
-								</li>
-								<li>
-									<a href="" title="Wide">Wide</a>
-								</li>
-							</ul>
+								<ul>
+									<li>
+										<a href="" title="Mini">Mini</a>
+									</li>
+									<li>
+										<a href="" title="square">Square</a>
+									</li>
+									<li>
+										<a href="" title="Wide">Wide</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</li>
 <!-- Instant camera's einde	-->
 
 <!-- 120 film begin -->
 					<li>
-						<a href="">120 FILM</a>
-						
-								<a href="" title="KLEUR NEGATIEF">KLEUR NEGATIEF</a>
+						<button class="menubutton">120 FILM</button>
+						<!-- <a class="tijdelijkoptie" href="">120 FILM</a> -->
+						<div class="menuinhoud">
+							<a class="menutitel" href="" title="KLEUR NEGATIEF">KLEUR NEGATIEF</a>
 							
 							<ul>
 								<li>
@@ -85,7 +95,7 @@
 							</ul>
 						
 						
-								<a href="" title="ZWART-WIT NEGATIEF">ZWART-WIT NEGATIEF</a>
+								<a class="menutitel" href="" title="ZWART-WIT NEGATIEF">ZWART-WIT NEGATIEF</a>
 							
 							<ul>
 								<li>
@@ -98,6 +108,7 @@
 									<a href="" title="Kodak">Kodak</a>
 								</li>
 							</ul>
+						</div>
 					</li>
 <!-- 120 film einde -->
 				</ul>
@@ -109,60 +120,90 @@
 
 	<main>
 		<section>
-
-					<img class="banner" src="images/banner.jpg" alt="">
-				
-				<h1>HALLOO</h1>
+			<div id="slideshow">
+				<div class="slidebox">
+					<img class="banner" src="images/screenshot/slide1.jpg" alt="">
+					<img class="banner" src="images/screenshot/slide2.png" alt="">
+				</div>
+			</div>
+				<!-- <h1>HALLOO</h1> -->
 			
 			<ul class="service">
 				<li>
-					<i>icon</i>
-					<h3>Gratis levering</h3>
+					<div class="flipbox">
+						<div class="flip">
+							<img class="flipfoto" src="images/screenshot/service1.png" alt="">
+						</div>
+					</div>
+					<h3 class="yellow">Gratis levering</h3>
 					<p>Vanaf € 99 in BE en NL. </p>
 				</li>
 				<li>
-					<i>icon</i>
-					<h3>Verminderde verzendkosten</h3>
+					<div class="flipbox">
+						<div class="flip">
+							<img class="flipfoto2" src="images/screenshot/service2.png">
+						</div>
+					</div>
+					<h3 class="yellow">Verminderde verzendkosten</h3>
 					<p>Vanaf € 150 in andere EU-landen.</p>
 				</li>
 				<li>
-					<i>icon</i>
-					<h3>Winkelen in vertrouwen</h3>
+					<div class="flipbox">
+						<div class="flip">
+							<img class="flipfoto3" src="images/screenshot/service3.png">
+						</div>
+					</div>
+					<h3 class="yellow">Winkelen in vertrouwen</h3>
 					<p>Bij een Belgische familiebedrijf.</p>
 				</li>
 				<li>
-					<i>icon</i>
-					<h3>Persoonlijke service</h3>
+					<div class="flipbox">
+						<div class="flip">
+							<img class="flipfoto4" src="images/screenshot/service4.png">
+						</div>
+					</div>
+					<h3 class="yellow">Persoonlijke service</h3>
 					<p>Wij staan 24/7 voor je klaar!</p>
 				</li>
 			</ul>
 		</section>
 
+		<hr>
+
 		<section>
 		
-			<h2>Nieuwe producten, net binnen.</h2>
+			<h2>Nieuwe producten,<br> net binnen.</h2>
 			<p>Geweldig, we hebben deze nieuwe producten net uitgepakt. Ook enthousiast? Goed nieuws, deze zijn namelijk nu online en in onze winkel te bestellen! #filmisnotdead</p>
 			
 		</section>
 
 <!-- Productenlijstje -->
 		<section>
-			<ul>
+			<ul class="articlelist">
 				<li>
 					<article>
 						<div>
 							<a href="">
-								<img src="images/homepagina/1.jpg" alt="">
-								<p>nieuw</p>
-								<ul>
-									<li>Toevoegen aan winkelmandje</li>
-									<li>Toevoegen an verlanglijst</li>
-									<li>Toevoegen aan vergelijking</li>
+								<img class="articlepic" src="images/producten/1 (15).png" alt="">
+								<p class="nieuw">nieuw</p>
+								<ul class="producticons">
+									<li>
+										<i><img class="smallicon" src="images/screenshot/cart.png" alt=""></i>
+										<!-- <span>Toevoegen aan winkelmandje</span></li> -->
+									</li>
+									<li>
+										<i><img class="smallicon" src="images/screenshot/cart.png" alt=""></i>
+										<!-- <span>Toevoegen an verlanglijst</span></li> -->
+									</li>
+									<li>
+										<i><img class="smallicon" src="images/screenshot/cart.png" alt=""></i>
+										<!-- <span>Toevoegen aan vergelijking</span></li> -->
+									</li>
 								</ul>
 							</a>
 						</div>
 						<div>
-							<h4>kinetronics Digital Scanner Cleaning Kit (CS-030)</h4>
+							<h4><a href="">Kodak T-MAX 100 120 / 5-pak - EXPIRED</a></h4>
 							<span>Prijs</span>
 							<!-- <p>De Kinetronics Digital Scanner Cleaning Kit is een niet te missen set voor elke analoge fotograaf die regelmatig zijn negatieven zelf digitaliseert met behulp van een flatbed scanner. De set bevat...
 							</p> -->
@@ -177,11 +218,16 @@
 		<section>expired film</section>
 
 			<a class="shoppingcart" href="">
-				<img  src="images/homepagina/shoppingcart.png" alt="">
+				<img  src="images/screenshot/cart2.png" alt="">
 				<span></span>
 			</a>
+			<h5 class="testtest">testest</h5>
+			<p class="testtest">testest</p>
+			<i class="far fa-user">heh</i>
 
+			<i class="fas fa-camera"></i>
 		<p>onderaan</p>
+
 
 	</main>
 

@@ -1,60 +1,94 @@
 /* CSS Document */
 *, *::after, *::before {
-  /* box-sizing:border-box;   */
-}
-
-/* tijdelijk */
-.tijdelijkoptie{
-font-weight: bold;
-}
-}
-
-/* tijdelijk */
-
-img{
-  width: 85vw;
+  box-sizing:border-box;  
 }
 
 
 body{
   margin: 0;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.55;
   font-family: sans-serif;
-  letter-spacing: .8px;
+  letter-spacing: .1em;
 }
+
 ul{
   list-style-type: none;
 }
+
+a{
+  text-decoration: none;
+}
+
 p{
   display: block;
   margin-block-start: 2em;
   margin-block-end: 2em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  max-width: 20em;
-  /* padding-left: 9px;
-  padding-right: 9px; */
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   text-align: center;
+  margin-top: 0em;
   margin-left: auto;
   margin-right: auto;
+  padding:1.125em;
+  /* width: 20em; */
+  /* max-width: 90vw; */
+  font-size: 0.875em;
+  max-width: 54em;
+}
+
+h2{
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.25em;
+  /* margin: 0 0 .625em; */
+  /* padding-top: 2em; */
+  max-width: 54em;
+  padding-left:0.5625em;
+  padding-right: 0.5625em;
+  margin-bottom: 0em;
+}
+
+
+header img{
+  padding-top: 2em;
   width: 20em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.menuinhoud{
-  font-size: 12px;
+header a:nth-of-type(n+2){
+  position: relative;
+  top: 2em;
+  left: 10.5em;
+  margin-left: -.5em;
+  text-decoration: none;
 }
 
-.menubutton{
+header svg{
+  max-height: 1.5em;
+  margin-bottom: 2em;
+  max-width: 3em;
+
+}
+
+header nav ul li{
+  font-size: .75em;
+}
+
+header nav button{
   border: none;
   background-color: white;
   padding: 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
 }
-.menutitel{
+
+header ul li h3{
   text-transform: uppercase;
   font-weight: bold;
+  color: black;
 }
 
 li a{
@@ -62,19 +96,18 @@ li a{
   color: black;
 }
 
-h2{
-  font-size: 35px;
-  text-align: center;
-  line-height: 40px;
-  margin: 0 0 10px;
-  padding-top: 30px;
-}
-
 h4{
   text-align: center;
-  margin: 0 0 5px;
+  margin: 0 0 0.3em;
   position: relative;
   bottom: 5em;
+  color: black;
+  width: 18em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 h4 a{
@@ -82,18 +115,27 @@ h4 a{
   text-decoration: none;
   color: black;
 }
+/* h4{
+  text-align: center;
+  margin: 0 0 0.3em;
+  position: relative;
+  bottom: 5em;
+} */
+
+h4:hover{
+  color: rgb(243, 156, 17);
+}
 
 /* bron voor hamburger menu https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0 */
-button.hamburgermenu{
+header button{
   position: relative;
   z-index: 1001;
   /* maak in menu zindex zelfde als het menu zodat het er 
   onder terecht komt. Vervolgens een kruisje toevoegen rechtsboven om 
   het ooit te kunnensluiten; */
-  top: 2em;
   left:3em;
-  width: 36px;
-  height: 36px;
+  width: 2.25em;
+  height: 2.25em;
   border: none;
   cursor: pointer;
   background-color:white ;
@@ -108,16 +150,7 @@ button.hamburgermenu{
 
 }
 
-.lijstje{
-  background-color: white;
-  height: 100vh;
-  width: 60vw;
-  margin-top: 0;
-  padding: 0px;
-  /* transition: background-color 1s ease-in; */
-  -webkit-transition: background-color 2s ease-in;
-}
-.navbar {
+header nav {
   z-index: 1000;
   position: absolute;
   top: 0;
@@ -138,55 +171,41 @@ button.hamburgermenu{
   /* transition adds a little animation when sliding in and out the menu */
   transition: transform .5s ease;
 }
+header nav ul:first-child{
+  background-color: white;
+  height: 100vh;
+  width: 60vw;
+  margin-top: 0;
+  padding: 0;
+  /* transition: background-color 1s ease-in; */
+  /* -webkit-transition: background-color 2s ease-in; */
+}
 
 .showNav{
   transform: translateY(0);
 }
 
+                                        /* einde van menu */
 
-/* .dropbtn{
-  background-color: red;
-  padding: 16px;
-  border: none;
+                                        /* image slider/ */
+main section:nth-of-type(1){
+  width: 85vw;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.dropdown{
-  position: relative;
-  display: inline-block;
+main section:nth-of-type(1) article{
+  width: 750em; /* 300 x 4 */
+  position:relative;
+  -webkit-animation:slide 8s ease-in-out infinite;
+  -moz-animation:slide 8s ease-in-out infinite;
+  -ms-animation:slide 8s ease-in-out infinite;
+  -o-animation:slide 8s ease-in-out infinite;
+  animation:slide 8s ease-in-out infinite;
 }
 
-.dropdown-content li a{
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content li a:hover {background-color: orange;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn{background-color: pink;} */
-
-
-/* einde van menu */
-a.home img{
-  padding-top: 30px;
-  width: 80vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.header a img{
-  position: relative;
-  max-height: 2em;
-  width: auto;
-  max-height: 24px;
-  top: 2em;
-  left:10em;
-  margin-left: .7em;
-  margin-bottom: .5em;
-}
-
-/* banner/ */
-img.banner{
+main section:nth-of-type(1)  img{
+  float:left;
   max-width: 90vw;
   height: auto;
   display: block;
@@ -196,154 +215,160 @@ img.banner{
   z-index: -1000;
 }
 
-#slideshow{
-  width: 80vw;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.slidebox{
-  width:1200px; /* 300 x 4 */
-  position:relative;
-  -webkit-animation:slide 8s ease-in-out infinite;
-  -moz-animation:slide 8s ease-in-out infinite;
-  -ms-animation:slide 8s ease-in-out infinite;
-  -o-animation:slide 8s ease-in-out infinite;
-  animation:slide 8s ease-in-out infinite;
-}
-.slidebox img{
-  /* width:300px; */
-  /* height:200px; */
-  float:left;
-}
-
 @-webkit-keyframes slide {
   0% {left:0;}
   33% {left:-90vw;}
   99% {left:0vw;}
 }
+                                        /* einde image slider */
 
-/* eerste 4 icons */
-ul.service{
+                                        /* eerste 4 icons */
+main section:nth-of-type(2) {
   list-style-type: none;
-  font-size: 14px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  font-size: .875em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 0em;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 85vw;
 }
 
-ul.service li{
+main section:nth-of-type(2) figure{
 padding-left: 1em;
 padding-right: 1em;
-margin-bottom: 15px;
-}
-/* icons flippen */
-.flipfoto{
-  width: 60px;
-}
-.flipfoto2{
-  width: 50px;
-}
-.flipfoto3{
-  width: 35px;
-}
-.flipfoto4{
-  width: 30px;
-  align-items: center;
+margin-bottom: 1em;
+text-align: center;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(8em, 20em));
+margin: 0;
+padding: 0;
 }
 
-.flip{
-  position: relative;
+/* @media screen and (min-width: 1200px) {
+  main section:nth-of-type(2) figure{
+    grid-template-columns: 1fr 1fr;
+  }
+  main section:nth-of-type(2) h3 + p{
+    text-align: left;
+  }
+  h3{
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+} */
+
+main section:nth-of-type(2) figure:hover svg{
+  transform: rotateY(360deg);
+  fill:rgb(243, 156, 17);
+}
+
+main section:nth-of-type(2) figure:hover h3{
+  color: rgb(243, 156, 17);
+}
+
+main section:nth-of-type(2) svg{
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  display: inline-block;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
   text-transform: none;
+  max-height: 2em;
+  max-width: auto;
 }
 
-.flipbox {
-  /* display: inline-block; */
-  font-style: normal;
-  line-height: 1;
-  text-transform: none;
-  position: relative;
-  text-align: center;
-}
-
-.flipbox:hover .flip{
-  transform: rotateY(360deg);
-}
-
-.flipbox:hover + .yellow{
-  color: rgb(243, 156, 17);
-}
-ul.service li h3{
-  margin-bottom: 10px;
-  margin-top: 0;
+main section:nth-of-type(2) h3{
+  margin-bottom: .625em;
+  margin-top: 0em;
   max-width: 20em;
   text-align: center;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-ul.service li p{
-  margin-top: 0;
+main section:nth-of-type(2) p{
+  margin-top: 0em;
+  padding: 0;
   margin-bottom: 1em;
 }
-
-/* winkelkarretje */
-.shoppingcart img{
-  /* border-radius: 50%; */
-  width: 60px;
-  height: auto;
-  padding: 0;
-}
-
-.shoppingcart{
-  position: fixed;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  bottom: 0;
-}
+                                        /* einde van eerste 4 icons */
 
 hr{
-  width: calc(100% - 30px);
+  width: calc(100% - 2em);
 }
 
-.articlelist{
-padding: 0px;
+                                        /* productenlijstje */
+main section:nth-of-type(4){
+  justify-content: center;
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 19em));
+  grid-template-rows: auto;
+  grid-gap:2.5em;
 }
 
-.articlepic{
-display: block;
-margin-left: auto;
-margin-right: auto;
+article{
+  width: fit-content;
+  height: fit-content;
+}
+article a img{
+/* display: block; */
+/* margin-left: auto;
+margin-right: auto; */
+width: 100%;
 }
 
-.producticons{
+article ul{
   position: relative;
   display: flex;
-  top: -100px;
-
+  top: -6.25em;
 }
 
-.smallicon{
-  max-width: 30px;
-  margin-right: 15px;
+article ul li img{
+  max-width: 2em;
+  margin-right: 1em;
   border-radius: 50%;
 }
 
-.nieuw{
+article a p{
   position: relative;
   text-align: left;
   margin-left: 4em;
   bottom: 33em;
-  font-size: 10px;
+  font-size: 0.625em;
   color: red;
   text-transform: uppercase;
   text-decoration: none;
 }
+                                        /* einde productenlijstje */
+
+                                        /* winkelkarretje */
+section:last-of-type a img{
+  width: 3.75em;
+  height: auto;
+  padding: 0em;
+}
+
+main section:last-of-type{
+  position: fixed;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  bottom: 0;
+}
+                                        /* einde winkelkarretje */
 
 
 
@@ -354,5 +379,8 @@ margin-right: auto;
 /* https://www.w3schools.com/howto/howto_css_flip_image.asp */
 /* https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
 /* https://codepen.io/tojowe/pen/dFmtA */
-
-
+/* 
+h1 als logo? 
+https://www.sitepoint.com/community/t/should-i-really-use-h1-element-as-a-logo/246927/3 */
+/* pseudo elementen
+https://drafts.csswg.org/selectors-3/#nth-of-type-pseudo */

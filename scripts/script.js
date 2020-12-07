@@ -1,8 +1,8 @@
 // JavaScript Document
 
 // hamburgermenu
-var navbar = document.querySelector(".navbar")
-var ham = document.querySelector(".hamburgermenu")
+var navbar = document.querySelector("header nav")
+var ham = document.querySelector("header button")
 
 ham.addEventListener("click", toggleHamburger)
 

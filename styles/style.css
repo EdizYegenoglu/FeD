@@ -129,7 +129,7 @@ header nav button{
   padding: 14px 10px;
 }
 /* bron voor hamburger menu https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0 */
-header button.hamburger{
+header > button{
   position: relative;
   z-index: 1000;
   /* maak in menu z-index zelfde als het menu zodat het er 
@@ -147,7 +147,7 @@ header button.hamburger{
   background-size: 100%;
   margin-top: 1em;
 }
-header button.hamburger:hover{
+header > button:hover{
   background-color: rgb(243, 156, 17);
 }
 
@@ -180,6 +180,33 @@ header nav ul:first-child{
   padding: 0;
   /* transition: background-color 1s ease-in; */
   /* -webkit-transition: background-color 2s ease-in; */
+}
+@media screen and (min-width: 1200px){
+  header nav ul {
+    float: left;
+    position: relative;
+    color: white;
+  }
+  header nav li button{
+    float:left;
+  }
+  header nav ul:first-child{
+    width: 100vw;
+    height:auto;
+    /* background-color: red; */
+  }
+  header nav{
+    transform: none;
+    position: relative;
+    height: 10em;
+
+  }
+  header > button{
+    display: none;
+  }
+  header button img{
+    display: none;
+  }
 }
 
 .showNav{
@@ -260,11 +287,11 @@ main section:nth-of-type(1){
 main section:nth-of-type(1) article{
   width: 750em; /* 300 x 4 */
   position:relative;
-  /* -webkit-animation:slide 20s ease-in-out infinite;
+  -webkit-animation:slide 20s ease-in-out infinite;
   -moz-animation:slide 8s ease-in-out infinite;
   -ms-animation:slide 8s ease-in-out infinite;
   -o-animation:slide 8s ease-in-out infinite;
-  animation:slide 8s ease-in-out infinite; */
+  animation:slide 8s ease-in-out infinite;
 }
 
 main section:nth-of-type(1)  img{
@@ -448,16 +475,18 @@ main section:last-of-type{
 
 
 /* overige sites bronnen */
-/* https://www.codegrepper.com/code-examples/css/remove+list+markers+from+a+html+list */
-/* https://www.w3schools.com/howto/howto_css_style_hr.asp */
-/* https://www.w3schools.com/howto/howto_css_flip_image.asp */
-/* https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
-/* https://codepen.io/tojowe/pen/dFmtA */
-/* 
-h1 als logo? 
-https://www.sitepoint.com/community/t/should-i-really-use-h1-element-as-a-logo/246927/3 */
-/* pseudo elementen
-https://drafts.csswg.org/selectors-3/#nth-of-type-pseudo */
+/* https://www.codegrepper.com/code-examples/css/remove+list+markers+from+a+html+list
+https://www.w3schools.com/howto/howto_css_style_hr.asp
+https://www.w3schools.com/howto/howto_css_flip_image.asp
+https://www.w3schools.com/howto/howto_css_display_element_hover.asp
+https://codepen.io/tojowe/pen/dFmtA
 
-/* Hamburger menu achtergrond
-https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp  */
+h1 als logo? 
+https://www.sitepoint.com/community/t/should-i-really-use-h1-element-as-a-logo/246927/3
+pseudo elementen
+https://drafts.csswg.org/selectors-3/#nth-of-type-pseudo
+
+Hamburger menu achtergrond
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp 
+
+header > button */

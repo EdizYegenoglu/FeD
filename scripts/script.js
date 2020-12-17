@@ -52,3 +52,22 @@ function myFunction() {
   //   x.style.opacity= "1";
   // }
 }
+
+
+
+// var dropDown = document.querySelector("nav ul li ul li")
+// var menuHover = document.querySelector("nav ul li a, nav ul li ul li")
+// var menuHoverOut = document.querySelector("nav ul li ul")
+
+// menuHover.addEventListener("mouseover", toggleDropDown)
+// menuHoverOut.addEventListener("mouseout", toggleDropDown)
+
+// function toggleDropDown(){
+//   if (dropDown.style.display === "block") {
+//     dropDown.style.display = "none";
+//   } 
+//   else {
+//     dropDown.style.display = "block";
+//   }
+// }
+

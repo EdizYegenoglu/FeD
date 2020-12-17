@@ -28,19 +28,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Voortgang 3 (week 6)
 
 ### Stand van zaken
--Waarschijnlijk in de vakantie lekker doorwerken.-
+-nu bezig met de navigatie responsive af te maken, moet daarvoor eerst dingen aanpassen. het dropdown menu komt achter de slider terecht, ik moet een manier vinden om dat op te lossen. Verder moet ik de hele pagina nog vullen met alle content en de 2e pagina helemaal maken. Op css-tricks almanacs nog kijken voor leuke dingen. -
 
 **Screenshot(s):**
-<!-- <img src="images/screenshot/ss.png " width="375px" alt="homepagina">
-<img src="images/screenshot/ss.png " width="375px" alt="homepagina">
-<img src="images/screenshot/ss.png " width="375px" alt="homepagina">
-<img src="images/screenshot/ss.png " width="375px" alt="homepagina"> -->
+<img src="images/screenshot/ss7.png " width="375px" alt="homepagina">
+<img src="images/screenshot/ss8.png " width="375px" alt="homepagina">
+<!-- <img src="images/screenshot/ss.png " width="375px" alt="homepagina"> -->
+<!-- <img src="images/screenshot/ss.png " width="375px" alt="homepagina"> -->
 
 ### Agenda voor meeting
 
 -samen met je groepje opstellen-
 
--Ediz: -
+-Ediz: vragen waarom ik naar links kan scrollen. Vragen hoe ik het menu fix. -
 -student2-
 -student3-
 -student4-

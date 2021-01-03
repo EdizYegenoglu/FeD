@@ -1,4 +1,4 @@
-// JavaScript Document
+// JavaScript Document eerste pagina
 
 // hamburgermenu
 var navbar = document.querySelector("header nav")
@@ -16,7 +16,6 @@ function toggleHamburger(){
     navbar.classList.toggle("showNav")
     ham.classList.toggle("showClose")
     hamClose.classList.toggle("showClose")
-    // klikNaast.classList.toggle("showClose")
   }
 
 var menuLinks = document.querySelectorAll(".menuLink")
@@ -46,28 +45,87 @@ function myFunction() {
     x.style.display = "block";
     body.style.overflow = "hidden";
   }
-  // if (x.style.opacity === "1") {
-  //   x.style.opacity = "0";
-  // } else {
-  //   x.style.opacity= "1";
-  // }
+}
+// einde overlay 
+
+// menu/
+var dropDown = document.querySelector("nav ul li ul")
+var pijl = document.querySelector("nav ul li svg")
+
+
+pijl.addEventListener("click", toggleDropDown)
+
+function toggleDropDown(){
+  if (dropDown.style.display === "block") {
+    dropDown.style.display = "none";
+    pijl.style.transform = "rotate(0deg)";
+  }
+
+  else {
+    dropDown.style.display = "block";
+    pijl.style.transform = "rotate(180deg)";
+    pijl.style.transition = ".6s";
+  }
 }
 
+var dropDownTwee = document.querySelector("#lijstTwee")
+var pijlTwee = document.querySelector("#pijlTwee")
 
+pijlTwee.addEventListener("click", toggleDropDownTwee)
 
-// var dropDown = document.querySelector("nav ul li ul li")
-// var menuHover = document.querySelector("nav ul li a, nav ul li ul li")
-// var menuHoverOut = document.querySelector("nav ul li ul")
+function toggleDropDownTwee(){
+  if (dropDownTwee.style.display === "block") {
+    dropDownTwee.style.display = "none";
+    pijlTwee.style.transform = "rotate(0deg)";
+  }
 
-// menuHover.addEventListener("mouseover", toggleDropDown)
-// menuHoverOut.addEventListener("mouseout", toggleDropDown)
+  else {
+    dropDownTwee.style.display = "block";
+    pijlTwee.style.transform = "rotate(180deg)";
+    pijlTwee.style.transition = ".6s";
+  }
+}
+// einde menu 
 
-// function toggleDropDown(){
-//   if (dropDown.style.display === "block") {
-//     dropDown.style.display = "none";
-//   } 
-//   else {
-//     dropDown.style.display = "block";
-//   }
-// }
+// slider
+var slide = document.querySelector("#paginaEen main section:nth-of-type(1) img:last-of-type")
+
+setInterval(function afbeeldingSlider(){ 
+    if (slide.style.opacity === "100") {
+      slide.style.opacity = "0";
+    }
+    else {
+      slide.style.opacity = "100";
+    }
+}, 6000);
+// einde slider 
+
+// meer producten
+var meerLaden = document.querySelector("body main > button")
+var meerProducten = document.querySelector("main section:nth-of-type(5)")
+
+meerLaden.addEventListener("click", toggleMeerLaden)
+
+function toggleMeerLaden(){
+  meerProducten.style.display = "grid";
+  meerLaden.style.display = "none";
+}
+// einde meerproducten 
+
+// winkelwagen
+
+const button = document.querySelectorAll("section:nth-of-type(n+4):nth-of-type(-n+5) article ul li:first-child")
+var inDruk = document.querySelector(".inWinkelwagen")
+var teller = document.querySelector("section:last-of-type a span"),
+  count = 0;
+
+button.forEach((inDruk) => {
+inDruk.addEventListener("click", voegToe)
+});
+
+function voegToe(){
+  count += 1;
+  teller.innerHTML = + count;
+}
+// einde winkelwagen 
 

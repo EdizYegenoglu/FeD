@@ -1,1188 +1,1246 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-html{
-  overflow-y: scroll;
-}
-body{
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.55;
-  font-family: sans-serif;
-  letter-spacing: .1em;
-}
-button{
-  cursor: pointer;
-}
-ul{
-  list-style-type: none;
+/* algemeen */
+
+html {
+	overflow-y: scroll;
 }
 
-a{
-  text-decoration: none;
+body {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.55;
+	font-family: sans-serif;
+	letter-spacing: .1em;
 }
 
-p{
-  display: block;
-  text-align: center;
-  margin-top: 0em;
-  margin-left: auto;
-  margin-right: auto;
-  padding:1.125em;
-  font-size: 0.875em;
-  max-width: 54em;
+button {
+	cursor: pointer;
 }
 
-h2{
-  font-size: 2em;
-  text-align: center;
-  line-height: 1.25em;
-  max-width: 54em;
-  padding-left:0.5625em;
-  padding-right: 0.5625em;
-  margin-bottom: 0em;
+ul {
+	list-style-type: none;
 }
 
-
-header img{
-  padding-top: 2em;
-  width: 20em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+a {
+	text-decoration: none;
 }
 
-header nav ul li{
-  font-size: .85em;
-}
-@media screen and (min-width: 1200px){
-  header nav ul li{
-    font-size: .71em;
-  }
-}
-@media screen and (min-width: 1400px){
-  header nav ul li{
-    font-size: .85em;
-  }
+p {
+	display: block;
+	text-align: center;
+	margin-top: 0em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.125em;
+	font-size: 0.875em;
+	max-width: 54em;
 }
 
-header nav ul li a{
-  margin-left: .5em;
-  font-weight: 600;
-  color: black;
-  transition: .2s;
+h2 {
+	font-size: 2em;
+	text-align: center;
+	line-height: 1.25em;
+	max-width: 54em;
+	padding-left: 0.5625em;
+	padding-right: 0.5625em;
+	margin-bottom: 0em;
 }
 
-header nav ul li a:hover{
-  color: rgb(243, 156, 17);
-  transition: .2s;
+/* Header  */
+
+header img {
+	padding-top: 2em;
+	width: 20em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-header nav button{
-  border: none;
-  background-color: white;
-  padding: 0;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-header ul li h3{
-  text-transform: uppercase;
-  font-weight: bold;
-  color: black;
-  font-size: .85em;  ;
-}
-
-
-#paginaEen h4, #detailPagina section:nth-of-type(6) article h4{
-  text-align: center;
-  margin: 0 0 0.3em;
-  position: relative;
-  bottom: 3em;
-  color: black;
-  width: 18em;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  transition: .2s;
-}
-#paginaEen article:hover h4, #detailPagina section:nth-of-type(6) article:hover h4{
-  color: rgb(243, 156, 17);
-  transition: .4s;
-}
-
-h4 a{
-  text-align: center;
-  text-decoration: none;
-  color: black;
-}
-header nav button{ 
-  padding: 14px 10px;
-}
-/* bron voor hamburger menu https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0 */
-header > button{
-  position: relative;
-  z-index: 1000;
-  /* maak in menu z-index zelfde als het menu zodat het er 
-  onder terecht komt. Vervolgens een kruisje toevoegen rechtsboven om 
-  het ooit te kunnensluiten; */
-  left:3em;
-  width: 2.25em;
-  height: 2.25em;
-  border: none;
-  cursor: pointer;
-  background-color:white ;
-  border: solid 1px;
-  border-color: black;
-  background-image: url("https://ljc-dev.github.io/testing0/ham.svg") ;
-  background-size: 100%;
-  margin-top: 1em;
-  transition: .2s;
-}
-header > button:hover{
-  background-color: rgb(243, 156, 17);
-  transition: .2s;
-}
-
-.showClose{
-  background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
-}
-
-header nav {
-  z-index: 1000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow: hidden;
-  color: white;
-  /* hide the menu above the screen by default */
-  transform: translateX(-100%);
-  /* transition adds a little animation when sliding in and out the menu */
-  transition: transform .5s ease;
-}
-
-header nav ul{
-  padding-left: .2em;
-  /* height: 80vh; */
-}
-
-header nav{
-  background-color: white;
-  height: 100vh;
-  width: 14em;
-  margin-top: 0;
-  padding: 0;
-}
-
-nav ul > li{
-  position: relative;
-  float: left; 
-  padding-left: .25em;
-  padding-right: .25em;
-}
-
-nav li{
-  width:20em;
-  border-bottom: 1px solid #eee;
-  line-height: 3em;
-}
-nav ul ul{
-  display: none;
-  position: relative;
-}
-nav ul li li{
-  border-bottom: none;
-  line-height: 1.5em;
-}
-nav ul ul a{
-  font-size: .85em;
-  font-style: normal;
-  font-weight: 200;
-  display: block;
-}
-nav svg{
-  margin-right: 2.5em;
-  height: .8em;
-  width: auto;
-}
-
-
-
-@media screen and (min-width: 1200px){
-  header{
-    width: 100vw;
-    padding-top: 3em;
-    display: grid;
-    grid-template-columns: .8fr 3.6fr .12fr .12fr .12fr;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-  }
-
-  header img{
-    padding-top: .5em;
-    height: auto;
-    width: 12em;
-    margin-right: 1em;
-  }
-  header svg{
-    display: block;
-  }
-  .dropDown{
-    display: none;
-  }
-  header nav{
-    transform: none;
-    position: relative;
-    height: 4em;
-    width: auto;
-    z-index: 100;
-    margin-right: 3em;
-  }
-  header button{
-    display: none;
-  }
-  nav ul li{
-    width:auto;
-    border-bottom: none;
-    line-height: 1.5em;
-  }
-  nav li{
-    width: fit-content;
-  }
-  nav svg{
-    display: none;
-  }
-}
-
-.showNav{
-  transform: translateY(0);
-}
-
-header nav button img{
-  cursor: pointer;
-  position: relative;
-  max-height: 1em;
-  margin-bottom: 2em;
-  padding: 0;
-  margin-left: 4em;
-  margin-top: 1em;
-  margin-bottom: -1em;
-}
-
-#overlayDing{
-  cursor: pointer;
-  position: absolute;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-  margin: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 999;
-  visibility: visible;
-  background-color: rgba(0,0,0,.5);
-  zoom: 1;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: opacity 0.6s ease;
-  display: none;
-}
-                                        /* einde van menu */
-
-                                        /* 3 icons rechtsboven */
-/* header svg:nth-of-type(2), header svg:nth-of-type(3), header svg:nth-of-type(4){ */
-header svg{
-  max-height: 1.5em;
-  margin-bottom: 2em;
-  max-width: 3em;
-  position: relative;
-  /* align-content: right; */
-  cursor: pointer;
-  float: right;
-  right: 2em;
-  margin-bottom: 0;
-  margin-top: 1em;
-}
-                                        /* einde 3 icons rechtsboven */
-
-                                        /* image slider/ */
-
-main section:nth-of-type(1) article{
-  position:relative;
-}
-
-main section:nth-of-type(1)  img{
-  width: 90vw;
-  height: auto;
-  display: block;
-  margin-top: 1vh;
-  margin-left: auto;
-  margin-right: auto;
-}
-main section:nth-of-type(1) img:last-of-type{
-  position:absolute;
-  bottom: 0em;
-  opacity: 0;
-  transition: 2s;
-}
-@media screen and (min-width: 1200px){
-  main section:nth-of-type(1) img{
-  width: 100vw;
-  }
-}
-
-                                        /* einde image slider */
-
-                                        /* eerste 4 icons */
-#paginaEen main section:nth-of-type(2) {
-  list-style-type: none;
-  font-size: .875em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0em;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 85vw;
-}
-
-main section:nth-of-type(2) figure{
-padding-left: 1em;
-padding-right: 1em;
-margin-bottom: 1em;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(8em, 20em));
-margin: 0;
-padding: 0;
-}
-
-main section:nth-of-type(2) figure:hover svg{
-  transform: rotateY(360deg);
-  fill:rgb(243, 156, 17);
-}
-
-main section:nth-of-type(2) figure:hover h3{
-  color: rgb(243, 156, 17);
-  transition: .3s;
-}
-
-main section:nth-of-type(2) svg{
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  max-height: 2.2em;
-}
-
-main section:nth-of-type(2) h3{
-  margin-bottom: .3em;
-  margin-top: 0em;
-  max-width: 20em;
-  text-align: center;
-  text-decoration: none;
-  margin-left: auto;
-  margin-right: auto;
-  transition: .3s;
-}
-
-main section:nth-of-type(2) p{
-  margin-top: 0em;
-  padding: 0;
-  margin-bottom: 1em;
+header nav ul li {
+	font-size: .85em;
 }
 
 @media screen and (min-width: 1200px) {
-  main section:nth-of-type(2) figure{
-    grid-template-columns: 1fr 1fr;
-  }
-  main section:nth-of-type(2) h3, main section:nth-of-type(2) p{
-    text-align: left;
-  }
-  main section:nth-of-type(2) svg{
-    margin-top: .8em;
-  }
+	header nav ul li {
+		font-size: .71em;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	header nav ul li {
+		font-size: .85em;
+	}
+}
+
+header nav ul li a {
+	margin-left: .5em;
+	font-weight: 600;
+	color: black;
+	transition: .2s;
+}
+
+header nav ul li a:hover {
+	color: rgb(243, 156, 17);
+	transition: .2s;
+}
+
+header nav button {
+	border: none;
+	background-color: white;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+header ul li h3 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: black;
+	font-size: .85em;
+	;
+}
+
+#paginaEen h4,
+#detailPagina section:nth-of-type(6) article h4 {
+	text-align: center;
+	margin: 0 0 0.3em;
+	position: relative;
+	bottom: 3em;
+	color: black;
+	width: 18em;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	transition: .2s;
+}
+
+#paginaEen article:hover h4,
+#detailPagina section:nth-of-type(6) article:hover h4 {
+	color: rgb(243, 156, 17);
+	transition: .4s;
+}
+
+/* menu */
+
+h4 a {
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+header nav button {
+	padding: 14px 10px;
+}
+
+header>button {
+	position: relative;
+	z-index: 1000;
+	left: 3em;
+	width: 2.25em;
+	height: 2.25em;
+	border: none;
+	cursor: pointer;
+	background-color: white;
+	border: solid 1px;
+	border-color: black;
+	background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+	background-size: 100%;
+	margin-top: 1em;
+	transition: .2s;
+}
+
+header>button:hover {
+	background-color: rgb(243, 156, 17);
+	transition: .2s;
+}
+
+.showClose {
+	background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+header nav {
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	overflow: hidden;
+	color: white;
+	transform: translateX(-100%);
+	transition: transform .5s ease;
+}
+
+header nav ul {
+	padding-left: .2em;
+}
+
+header nav {
+	background-color: white;
+	height: 100vh;
+	width: 14em;
+	margin-top: 0;
+	padding: 0;
+}
+
+nav ul>li {
+	position: relative;
+	float: left;
+	padding-left: .25em;
+	padding-right: .25em;
+}
+
+nav li {
+	width: 20em;
+	border-bottom: 1px solid #eee;
+	line-height: 3em;
+}
+
+nav ul ul {
+	display: none;
+	position: relative;
+}
+
+nav ul li li {
+	border-bottom: none;
+	line-height: 1.5em;
+}
+
+nav ul ul a {
+	font-size: .85em;
+	font-style: normal;
+	font-weight: 200;
+	display: block;
+}
+
+nav svg {
+	margin-right: 2.5em;
+	height: .8em;
+	width: auto;
+}
+
+@media screen and (min-width: 1200px) {
+	header {
+		width: 100vw;
+		padding-top: 3em;
+		display: grid;
+		grid-template-columns: .8fr 3.6fr .12fr .12fr .12fr;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+	}
+	header img {
+		padding-top: .5em;
+		height: auto;
+		width: 12em;
+		margin-right: 1em;
+	}
+	header svg {
+		display: block;
+	}
+	.dropDown {
+		display: none;
+	}
+	header nav {
+		transform: none;
+		position: relative;
+		height: 4em;
+		width: auto;
+		z-index: 100;
+		margin-right: 3em;
+	}
+	header button {
+		display: none;
+	}
+	nav ul li {
+		width: auto;
+		border-bottom: none;
+		line-height: 1.5em;
+	}
+	nav li {
+		width: fit-content;
+	}
+	nav svg {
+		display: none;
+	}
+}
+
+.showNav {
+	transform: translateY(0);
+}
+
+header nav button img {
+	cursor: pointer;
+	position: relative;
+	max-height: 1em;
+	margin-bottom: 2em;
+	padding: 0;
+	margin-left: 4em;
+	margin-top: 1em;
+	margin-bottom: -1em;
+}
+
+#overlayDing {
+	cursor: pointer;
+	position: absolute;
+	width: 100vw;
+	height: auto;
+	overflow: hidden;
+	margin: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+	visibility: visible;
+	background-color: rgba(0, 0, 0, .5);
+	zoom: 1;
+	filter: alpha(opacity=0);
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: opacity 0.6s ease;
+	display: none;
+}
+
+/* einde van menu */
+
+/* 3 icons rechtsboven */
+
+header svg {
+	max-height: 1.5em;
+	margin-bottom: 2em;
+	max-width: 3em;
+	position: relative;
+	cursor: pointer;
+	float: right;
+	right: 2em;
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+/* einde 3 icons rechtsboven */
+
+/* image slider/ */
+
+main section:nth-of-type(1) article {
+	position: relative;
+}
+
+main section:nth-of-type(1) img {
+	width: 90vw;
+	height: auto;
+	display: block;
+	margin-top: 1vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main section:nth-of-type(1) img:last-of-type {
+	position: absolute;
+	bottom: 0em;
+	opacity: 0;
+	transition: 2s;
+}
+
+@media screen and (min-width: 1200px) {
+	main section:nth-of-type(1) img {
+		width: 100vw;
+	}
+}
+
+/* einde image slider */
+
+/* eerste 4 icons */
+
+#paginaEen main section:nth-of-type(2) {
+	list-style-type: none;
+	font-size: .875em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0em;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 85vw;
+}
+
+main section:nth-of-type(2) figure {
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(8em, 20em));
+	margin: 0;
+	padding: 0;
+}
+
+main section:nth-of-type(2) figure:hover svg {
+	transform: rotateY(360deg);
+	fill: rgb(243, 156, 17);
+}
+
+main section:nth-of-type(2) figure:hover h3 {
+	color: rgb(243, 156, 17);
+	transition: .3s;
+}
+
+main section:nth-of-type(2) svg {
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	max-height: 2.2em;
+}
+
+main section:nth-of-type(2) h3 {
+	margin-bottom: .3em;
+	margin-top: 0em;
+	max-width: 20em;
+	text-align: center;
+	text-decoration: none;
+	margin-left: auto;
+	margin-right: auto;
+	transition: .3s;
+}
+
+main section:nth-of-type(2) p {
+	margin-top: 0em;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+	main section:nth-of-type(2) figure {
+		grid-template-columns: 1fr 1fr;
+	}
+	main section:nth-of-type(2) h3,
+	main section:nth-of-type(2) p {
+		text-align: left;
+	}
+	main section:nth-of-type(2) svg {
+		margin-top: .8em;
+	}
 }
 
 @media screen and (min-width: 900px) {
-  #paginaEen main section:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    white-space: nowrap;
-  }
-}
-                                        /* einde van eerste 4 icons */
-
-hr{
-  width: calc(100% - 2em);
+	#paginaEen main section:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		white-space: nowrap;
+	}
 }
 
-                                        /* productenlijstje */
-main section:nth-of-type(4), main section:nth-of-type(5), #detailPagina main section:nth-of-type(6){
-  justify-content: center;
-  width: 90vw;
-  margin-right: auto;
-  margin-left: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 21em));
-  grid-template-rows: auto;
+/* einde van eerste 4 icons */
+
+hr {
+	width: calc(100% - 2em);
 }
 
-#paginaEen article, #detailPagina section:nth-of-type(6) article{
-  width: fit-content;
-  height: fit-content;
-  margin-right: auto;
-  margin-left: auto;
+/* productenlijstje */
+
+main section:nth-of-type(4),
+main section:nth-of-type(5),
+#detailPagina main section:nth-of-type(6) {
+	justify-content: center;
+	width: 90vw;
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18em, 21em));
+	grid-template-rows: auto;
 }
 
-article ul{
-  opacity: 100;
-  visibility: visible;
-  position: relative;
-  display: flex;
-  top: -4.25em;
-  left: -1.5em;
-}
-@media screen and (min-width: 1200px){
-  #paginaEen article ul, #detailPagina section:nth-of-type(6) article ul{
-    opacity: 0;
-    visibility: hidden;
-    transition: .5s;
-  }
-  #paginaEen article:hover ul,#detailPagina section:nth-of-type(6) article:hover ul{
-    opacity: 1;
-    visibility: visible;
-    transition: .5s;
-  }
+#paginaEen article,
+#detailPagina section:nth-of-type(6) article {
+	width: fit-content;
+	height: fit-content;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-article ul li svg{
-  max-width: 1.2em;
-  background-color: white;
-  transition: .5s;
-}
-article i{
-  margin-right: 1.5em;
-  padding: .8em;
-  border-radius: 50%;
-  background-color: white;
-  transition: .5s;
-  cursor: pointer;
-}
-article ul li svg:hover{
-  fill:white;
-  background-color: rgb(180, 180, 180);
-  transition: .5s;
-}
-article i:hover svg{
-  background-color:  rgb(180, 180, 180);
-  fill: white;
-  transition: .5s;
-}
-#paginaEen article i:hover, #detailPagina section:nth-of-type(6) article i:hover{
-  background-color: rgb(180, 180, 180);
-  transition: .5s;
-}
-article li span{
-  display: flex;
-  position: absolute;
-  font-size: .7em;
-  width: fit-content;
-  background-color: gray;
-  color: white;
-  border-radius: 11px;
-  white-space: nowrap;
-  padding: .4em;
-  transform:translateX(-35%);
-  margin-bottom: 1em;
-  letter-spacing: 1px;
-  bottom: 100%;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: .5s;
+article ul {
+	opacity: 100;
+	visibility: visible;
+	position: relative;
+	display: flex;
+	top: -4.25em;
+	left: -1.5em;
 }
 
-article li i:hover + span{
-opacity: 100;
-visibility: visible;
-transition: .5s;
-}
-article:hover h4{
-    color: rgb(243, 156, 17);
-    transition: .2s;
-    cursor: pointer;
-}
-
-#paginaEen article > span, #detailPagina section:nth-of-type(6) article > span{
-  position: relative;
-  left: 7em;
-  bottom: 3em;
+@media screen and (min-width: 1200px) {
+	#paginaEen article ul,
+	#detailPagina section:nth-of-type(6) article ul {
+		opacity: 0;
+		visibility: hidden;
+		transition: .5s;
+	}
+	#paginaEen article:hover ul,
+	#detailPagina section:nth-of-type(6) article:hover ul {
+		opacity: 1;
+		visibility: visible;
+		transition: .5s;
+	}
 }
 
-article img{
-  width: 100%;
-  height: auto;
+article ul li svg {
+	max-width: 1.2em;
+	background-color: white;
+	transition: .5s;
 }
 
-                                        /* einde productenlijstje */
-
-                                        /* uitklapbaar productenlijstje */
-main section:nth-of-type(5){
-  display: none;
+article i {
+	margin-right: 1.5em;
+	padding: .8em;
+	border-radius: 50%;
+	background-color: white;
+	transition: .5s;
+	cursor: pointer;
 }
 
-main button h5{
-  font-size: 1.2em;
-  padding: 0em 1em;
-  width: fit-content;
-  background:linear-gradient(
-    to top,
-    rgb(243, 156, 17) 0%,
-    rgb(243, 156, 17) 50%,
-    white 50%,
-    white 100%);
-  transition: .5s;
-}
-main > button{
-  border: none;
-  outline: none;
-  background-color: white;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  cursor: pointer;
-}
-main > button:hover h5{
-  transform: scale(1.1);
-  transition: .5s;
-}
-                                        /* einde uitklapbaarproductenlijstje */
-
-                                        /* 35 en 120 film */
-main section:nth-of-type(6), section:nth-of-type(7){
-max-width: 85vw;
-justify-content: center;
-margin-top: 2em;
-margin-right: auto;
-margin-left: auto;
-}
-main section:nth-of-type(6) figure, section:nth-of-type(7) figure{
-margin: 0;
-overflow: hidden;
-position: relative;
-cursor: pointer;
-margin-bottom: 1em;
-height: 25vh;
-}
-main section:nth-of-type(6) h5, main section:nth-of-type(6) p{
-  position: absolute;
-}
-main section:nth-of-type(6) h5{
-  left: 1em;
-  bottom: 3em;
-  font-size: 2em;
-  font-weight: 800;
-  transition: .5s;
-}
-main section:nth-of-type(6) p{
-  padding: 0;
-  bottom: 9em;
-  left: 2.3em;
+article ul li svg:hover {
+	fill: white;
+	background-color: rgb(180, 180, 180);
+	transition: .5s;
 }
 
-main section:nth-of-type(6) figure img{
-  -webkit-transform: scale(.75) translateX(-20%) translateY(-30%);
-  transform: scale(.75) translateX(-20%) translateY(-30%);
-  transition: .5s;
-}
-main section:nth-of-type(6) figure:first-child img{
- -webkit-transform: scale(.5) translateX(-60%) translateY(-50%);
-  transform: scale(.5) translateX(-60%) translateY(-50%);
-}
-                                        /* einde 35 en 120 film  */
-                                  
-                                        /* expired */
-main section:nth-of-type(7) img{
-max-width: 85vw;
-cursor: pointer;
-}
-main section:nth-of-type(7) h5{
-  font-size: 1.2em;
-  font-weight: 1000;
-  position: absolute;
-  bottom: 6.6em;
-  left: .8em;
-  transform: rotate(-11.5deg) scale(1) translateX(0%) translatey(0%);
-  letter-spacing: .05em;
-  color: white;
-  text-shadow:
-    -3px -3px black,
-    -1px -1px black,
-    0px 0px black,
-    1px 1px black,
-    2px 2px black,
-    3px 3px black,
-    4px 4px black,
-    5px 5px black;
-
-  transition: .5s;
-}
-section:nth-of-type(7) figure:hover h5{
-  transform: rotate(-11.5deg) scale(1.12) translateX(-4%) translatey(-20%);
-  color: rgb(243, 156, 17);
-  transition: .5s;
-}
-section:nth-of-type(7) figure:hover img{
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  transition: .5s;
+article i:hover svg {
+	background-color: rgb(180, 180, 180);
+	fill: white;
+	transition: .5s;
 }
 
-main section:nth-of-type(7) h6{
-  position: absolute;
-  font-size: 1.8em;
-  bottom: 7em;
-  left: 28em;
-  display: none;
+#paginaEen article i:hover,
+#detailPagina section:nth-of-type(6) article i:hover {
+	background-color: rgb(180, 180, 180);
+	transition: .5s;
 }
-main section:nth-of-type(7) p{
-  position: absolute;
-  font-size: 1.2em;
-  font-weight: 550;
-  bottom: 10em;
-  left: 40.9em;
-  color: rgb(243, 156, 17);
-  display: none;
+
+article li span {
+	display: flex;
+	position: absolute;
+	font-size: .7em;
+	width: fit-content;
+	background-color: gray;
+	color: white;
+	border-radius: 11px;
+	white-space: nowrap;
+	padding: .4em;
+	transform: translateX(-35%);
+	margin-bottom: 1em;
+	letter-spacing: 1px;
+	bottom: 100%;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: .5s;
+}
+
+article li i:hover+span {
+	opacity: 100;
+	visibility: visible;
+	transition: .5s;
+}
+
+article:hover h4 {
+	color: rgb(243, 156, 17);
+	transition: .2s;
+	cursor: pointer;
+}
+
+#paginaEen article>span,
+#detailPagina section:nth-of-type(6) article>span {
+	position: relative;
+	left: 7em;
+	bottom: 3em;
+}
+
+article img {
+	width: 100%;
+	height: auto;
+}
+
+/* einde productenlijstje */
+
+/* uitklapbaar productenlijstje */
+
+main section:nth-of-type(5) {
+	display: none;
+}
+
+main button h5 {
+	font-size: 1.2em;
+	padding: 0em 1em;
+	width: fit-content;
+	background: linear-gradient( to top, rgb(243, 156, 17) 0%, rgb(243, 156, 17) 50%, white 50%, white 100%);
+	transition: .5s;
+}
+
+main>button {
+	border: none;
+	outline: none;
+	background-color: white;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+}
+
+main>button:hover h5 {
+	transform: scale(1.1);
+	transition: .5s;
+}
+
+/* einde uitklapbaarproductenlijstje */
+
+/* 35 en 120 film */
+
+main section:nth-of-type(6),
+section:nth-of-type(7) {
+	max-width: 85vw;
+	justify-content: center;
+	margin-top: 2em;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+main section:nth-of-type(6) figure,
+section:nth-of-type(7) figure {
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 1em;
+	height: 25vh;
+}
+
+main section:nth-of-type(6) h5,
+main section:nth-of-type(6) p {
+	position: absolute;
+}
+
+main section:nth-of-type(6) h5 {
+	left: 1em;
+	bottom: 3em;
+	font-size: 2em;
+	font-weight: 800;
+	transition: .5s;
+}
+
+main section:nth-of-type(6) p {
+	padding: 0;
+	bottom: 9em;
+	left: 2.3em;
+}
+
+main section:nth-of-type(6) figure img {
+	-webkit-transform: scale(.75) translateX(-20%) translateY(-30%);
+	transform: scale(.75) translateX(-20%) translateY(-30%);
+	transition: .5s;
+}
+
+main section:nth-of-type(6) figure:first-child img {
+	-webkit-transform: scale(.5) translateX(-60%) translateY(-50%);
+	transform: scale(.5) translateX(-60%) translateY(-50%);
+}
+
+/* einde 35 en 120 film  */
+
+/* expired */
+
+main section:nth-of-type(7) img {
+	max-width: 85vw;
+	cursor: pointer;
+}
+
+main section:nth-of-type(7) h5 {
+	font-size: 1.2em;
+	font-weight: 1000;
+	position: absolute;
+	bottom: 6.6em;
+	left: .8em;
+	transform: rotate(-11.5deg) scale(1) translateX(0%) translatey(0%);
+	letter-spacing: .05em;
+	color: white;
+	text-shadow: -3px -3px black, -1px -1px black, 0px 0px black, 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black;
+	transition: .5s;
+}
+
+section:nth-of-type(7) figure:hover h5 {
+	transform: rotate(-11.5deg) scale(1.12) translateX(-4%) translatey(-20%);
+	color: rgb(243, 156, 17);
+	transition: .5s;
+}
+
+section:nth-of-type(7) figure:hover img {
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
+	transition: .5s;
+}
+
+main section:nth-of-type(7) h6 {
+	position: absolute;
+	font-size: 1.8em;
+	bottom: 7em;
+	left: 28em;
+	display: none;
+}
+
+main section:nth-of-type(7) p {
+	position: absolute;
+	font-size: 1.2em;
+	font-weight: 550;
+	bottom: 10em;
+	left: 40.9em;
+	color: rgb(243, 156, 17);
+	display: none;
 }
 
 /* mediaquery van 35 120 & expired film  */
-@media screen and (min-width: 780px){
-  main section:nth-of-type(6){
-    display: flex;
-  }
-  main section:nth-of-type(6) figure, section:nth-of-type(7) figure{
-    height: 100%;
-  }
-  main section:nth-of-type(6) figure img, section:nth-of-type(7) img{
-    -webkit-transform: scale(1) translateX(0%) translateY(0%);
-    transform: scale(1) translateX(0%) translateY(0%);
-    transition: .5s;
-  }
-  main section:nth-of-type(6) figure:first-child img{
-    -webkit-transform: scale(1) translateX(0%) translateY(0%);
-     transform: scale(1) translateX(0%) translateY(0%);
-   }
-  main section:nth-of-type(6) figure:first-child{
-    margin-right: 1em;
-  }
-    main section:nth-of-type(6) figure:last-child{
-    margin-left: 1em;
-  }
-  main section:nth-of-type(6) figure:hover img{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-    transition: .5s;
-  }
-  main section:nth-of-type(6) figure:hover h5{
-    color: rgb(243, 156, 17);
-    transition: .5s;
-  }
-  main section:nth-of-type(6) h5{
-    left: 1em;
-    bottom: 9em;
-  }
-  main section:nth-of-type(6) p{
-    bottom: 22em;
-    left: 2.3em;
-  }
 
-  main section:nth-of-type(7) img{
-    max-width: 90em;
-  }
-  main section:nth-of-type(7) h5{
-    font-size: 4em;
-    bottom: 4.9em;
-    left: 2.4em;
-    text-shadow:
-    -3px -3px black,
-    -2px -2px black,
-    -1px -1px black,
-    0px 0px black,
-    1px 1px black,
-    2px 2px black,
-    3px 3px black,
-    4px 4px black,
-    5px 5px black,
-    6px 6px black,
-    7px 7px black,
-    8px 8px black,
-    9px 9px black,
-    10px 10px black,
-    11px 11px black,
-    12px 12px black;
-  }
-  main section:nth-of-type(7) h6, main section:nth-of-type(7) p{
-    display: block;
-  }
+@media screen and (min-width: 780px) {
+	main section:nth-of-type(6) {
+		display: flex;
+	}
+	main section:nth-of-type(6) figure,
+	section:nth-of-type(7) figure {
+		height: 100%;
+	}
+	main section:nth-of-type(6) figure img,
+	section:nth-of-type(7) img {
+		-webkit-transform: scale(1) translateX(0%) translateY(0%);
+		transform: scale(1) translateX(0%) translateY(0%);
+		transition: .5s;
+	}
+	main section:nth-of-type(6) figure:first-child img {
+		-webkit-transform: scale(1) translateX(0%) translateY(0%);
+		transform: scale(1) translateX(0%) translateY(0%);
+	}
+	main section:nth-of-type(6) figure:first-child {
+		margin-right: 1em;
+	}
+	main section:nth-of-type(6) figure:last-child {
+		margin-left: 1em;
+	}
+	main section:nth-of-type(6) figure:hover img {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+		-webkit-filter: blur(2px);
+		filter: blur(2px);
+		transition: .5s;
+	}
+	main section:nth-of-type(6) figure:hover h5 {
+		color: rgb(243, 156, 17);
+		transition: .5s;
+	}
+	main section:nth-of-type(6) h5 {
+		left: 1em;
+		bottom: 9em;
+	}
+	main section:nth-of-type(6) p {
+		bottom: 22em;
+		left: 2.3em;
+	}
+	main section:nth-of-type(7) img {
+		max-width: 90em;
+	}
+	main section:nth-of-type(7) h5 {
+		font-size: 4em;
+		bottom: 4.9em;
+		left: 2.4em;
+		text-shadow: -3px -3px black, -2px -2px black, -1px -1px black, 0px 0px black, 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black, 9px 9px black, 10px 10px black, 11px 11px black, 12px 12px black;
+	}
+	main section:nth-of-type(7) h6,
+	main section:nth-of-type(7) p {
+		display: block;
+	}
 }
-
 
 /* einde mediaquery */
-                                        /* Einde expired */
+/* Einde expired */
 
-                                        /* winkelkarretje */
-section:last-of-type a svg{
-  width: 3.75em;
-  height: auto;
-  transform: scale(.8);
-  padding: 1em;
-  position: absolute;
+/* winkelkarretje */
 
-}
-
-section:last-of-type a span{
-  width: 3.75em;
-  height: auto;
-  padding: .2em .4em;
-  position: relative;
-  bottom: .1em;
-  left: 2.4em;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
+section:last-of-type a svg {
+	width: 3.75em;
+	height: auto;
+	transform: scale(.8);
+	padding: 1em;
+	position: absolute;
 }
 
-main section:last-of-type{
-  width: 3.75em;
-  height: 3.75em;
-  background-color: white;
-  border-radius: 50%;
-  position: fixed;
-  left: .5em;
-  bottom: .5em;
+section:last-of-type a span {
+	width: 3.75em;
+	height: auto;
+	padding: .2em .4em;
+	position: relative;
+	bottom: .1em;
+	left: 2.4em;
+	background-color: black;
+	border-radius: 50%;
+	color: white;
 }
-                                        /* einde winkelkarretje */
 
-                                        /* footer */
-footer{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(85vw, 1fr));
+main section:last-of-type {
+	width: 3.75em;
+	height: 3.75em;
+	background-color: white;
+	border-radius: 50%;
+	position: fixed;
+	left: .5em;
+	bottom: .5em;
+}
 
-  /* grid-template-columns: 1fr; */
-  max-width: 85vw;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 5em;
-}
-footer ul{
-  padding-left: 0em;
-  margin: 0;
-}
-footer ul li{
-  margin: 2em 0em
-}
-footer ul img{
-  max-width: 85vw;
-  position: relative;
-}
-footer ul h6{
-  position: absolute;
-  font-size: .85em;
-  left: 27vw;
-  letter-spacing: 1px;
-  margin: 0;
-  font-weight: 300;
-  color:rgb(243, 156, 17) ;
-}
-footer ul address{
-  font-style: normal;
-  font-size: .9em;
-}
-footer ul a{
-  font-size: .9em;
-  color: black;
-  transition: .5s;
-}
-footer h5{
-  font-size: 1.1em;
-  margin-bottom: 2.85em;
-  margin-top: 1em;
-}
-footer ul a:hover{
-  color:rgb(243, 156, 17) ;
-  transition: .5s;
-}
-footer > a h5{
-  color: black;
-}
-footer > a img{
-  width: 20em;
-}
-@media screen and (min-width: 1200px){
-  footer{
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-  }
-  footer ul img{
-    max-width: 25vw;
-  }
-  footer ul h6{
-    left: 16vw;
-  }
-  footer > a img{
-    width: 20vw;
-  }
-  footer > a{
-    margin-top: 1em;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}                               
-                                        /* einde footer  */
+/* einde winkelkarretje */
 
-/* overige sites bronnen */
-/* https://www.codegrepper.com/code-examples/css/remove+list+markers+from+a+html+list
-https://www.w3schools.com/howto/howto_css_style_hr.asp
-https://www.w3schools.com/howto/howto_css_flip_image.asp
-https://www.w3schools.com/howto/howto_css_display_element_hover.asp
-https://codepen.io/tojowe/pen/dFmtA
+/* footer */
 
-h1 als logo? 
-https://www.sitepoint.com/community/t/should-i-really-use-h1-element-as-a-logo/246927/3
-pseudo elementen
-https://drafts.csswg.org/selectors-3/#nth-of-type-pseudo
-
-Hamburger menu achtergrond
-https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp 
-
-header > button */
-
-
-
-
-/* nieuwe bronnen. */
-/* https://www.warrenchandler.com/2019/04/29/half-and-half-background-colour-using-css/ */
-/* https://www.codeblocq.com/2016/05/Blur-Image-on-Hover-with-CSS/ */
-/* winkelwagen click
-https://codepen.io/juliogcampos/pen/BzdjwY */
-/* https://www.youtube.com/watch?v=D7sNpAiNMQM&ab_channel=dcode */
-
-/* timer functie */
-/* https://www.codegrepper.com/code-examples/javascript/jquery+do+something+every+x+seconds */
-/* https://www.w3schools.com/jsref/prop_img_src.asp */
-/* https://stackoverflow.com/questions/25868014/html-margin-issue-shaking-website */
-/* https://www.w3.org/Style/Examples/007/evenodd.en.html */
-/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
-#detailPagina main{
-  width: 90vw;
-  margin-left: auto;
-  margin-right:auto;
-  overflow-x: hidden;
+footer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(85vw, 1fr));
+	max-width: 85vw;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5em;
 }
-#detailPagina p, #detailPagina form label{
-  text-align: left;
-  font-size: .8em;
-  padding-top: 0;
-  color: rgb(48, 48, 48);
-  font-weight: 400;
+
+footer ul {
+	padding-left: 0em;
+	margin: 0;
 }
+
+footer ul li {
+	margin: 2em 0em
+}
+
+footer ul img {
+	max-width: 85vw;
+	position: relative;
+}
+
+footer ul h6 {
+	position: absolute;
+	font-size: .85em;
+	left: 27vw;
+	letter-spacing: 1px;
+	margin: 0;
+	font-weight: 300;
+	color: rgb(243, 156, 17);
+}
+
+footer ul address {
+	font-style: normal;
+	font-size: .9em;
+}
+
+footer ul a {
+	font-size: .9em;
+	color: black;
+	transition: .5s;
+}
+
+footer h5 {
+	font-size: 1.1em;
+	margin-bottom: 2.85em;
+	margin-top: 1em;
+}
+
+footer ul a:hover {
+	color: rgb(243, 156, 17);
+	transition: .5s;
+}
+
+footer>a h5 {
+	color: black;
+}
+
+footer>a img {
+	width: 20em;
+}
+
+@media screen and (min-width: 1200px) {
+	footer {
+		grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+	}
+	footer ul img {
+		max-width: 25vw;
+	}
+	footer ul h6 {
+		left: 16vw;
+	}
+	footer>a img {
+		width: 20vw;
+	}
+	footer>a {
+		margin-top: 1em;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+/* einde footer  */
+
+
+/* detailpagina  */
+
+#detailPagina main {
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: hidden;
+}
+
+/* aantal artikelen form en p */
+#detailPagina p,
+#detailPagina form label {
+	text-align: left;
+	font-size: .8em;
+	padding-top: 0;
+	color: rgb(48, 48, 48);
+	font-weight: 400;
+}
+/* einde aantal artikelen form en en p  */
+
 
 /* afbeeldingen  */
-#detailPagina section:first-of-type img{
-  display: block;
-  opacity: 100;
-  bottom: auto;
-  position: relative;
-  width: 85vw;
+
+#detailPagina section:first-of-type img {
+	display: block;
+	opacity: 100;
+	bottom: auto;
+	position: relative;
+	width: 85vw;
 }
-#detailPagina section:first-of-type ul{
-  display: flex;
-  padding: 0em;
-  margin-top: 0;
+
+#detailPagina section:first-of-type ul {
+	display: flex;
+	padding: 0em;
+	margin-top: 0;
 }
-#detailPagina section:first-of-type ul li{
-  position: relative;
-  margin: .5em;
+
+#detailPagina section:first-of-type ul li {
+	position: relative;
+	margin: .5em;
 }
-#detailPagina section:first-of-type ul img{
-  width: 9em;
-  height: auto;
-  cursor: pointer;
+
+#detailPagina section:first-of-type ul img {
+	width: 9em;
+	height: auto;
+	cursor: pointer;
 }
-#detailPagina section:first-of-type ul img:hover{
-border: 1px black solid;
+
+#detailPagina section:first-of-type ul img:hover {
+	border: 1px black solid;
 }
-.eersteFoto{
-  border: 1px black solid;
+
+.eersteFoto {
+	border: 1px black solid;
 }
+
 /* einde afbeeldingen  */
 
 /* tekst  */
-#detailPagina h2{
-  text-align: left;
-}
-#detailPagina main > h2{
-  text-align: center;
+
+#detailPagina h2 {
+	text-align: left;
 }
 
-#detailPagina section:nth-of-type(2) a p:hover{
-color:rgb(243, 156, 17) ;
-}
-#detailPagina section:nth-of-type(2) > p:last-of-type{
-  margin-top: 4em;
+#detailPagina main>h2 {
+	text-align: center;
 }
 
-#detailPagina section:nth-of-type(2){
-  margin-top: 6em;
-}
-#detailPagina section:nth-of-type(2) h2{
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-#detailPagina section:nth-of-type(2) ul:first-of-type{
-  display: grid;
-  width: 8em;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0;
-}
-#detailPagina section:nth-of-type(2) ul:first-of-type li{
-  width: 1em;
+#detailPagina section:nth-of-type(2) a p:hover {
+	color: rgb(243, 156, 17);
 }
 
-#detailPagina main section:nth-of-type(2) svg{
-transform: scale(.9);
-fill: rgb(175, 175, 175);
-transition: .4s;
-background: none;
-cursor: pointer;
-}
-#detailPagina main section:nth-of-type(2) i:hover svg{
-transform: scale(1.1);
-fill:rgb(243, 156, 17);
-transition: .4s;
-}
-#detailPagina main section:nth-of-type(2) span{
-  font-weight: 600;
-  font-size: 1.5em;
-}
-#detailPagina main section:nth-of-type(2) ul:nth-of-type(2){
-  padding: 0;
+#detailPagina section:nth-of-type(2)>p:last-of-type {
+	margin-top: 4em;
 }
 
-#detailPagina table td h3{
-  width: fit-content;
-  margin: 0;
+#detailPagina section:nth-of-type(2) {
+	margin-top: 6em;
 }
+
+#detailPagina section:nth-of-type(2) h2 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+#detailPagina section:nth-of-type(2) ul:first-of-type {
+	display: grid;
+	width: 8em;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 0;
+}
+
+#detailPagina section:nth-of-type(2) ul:first-of-type li {
+	width: 1em;
+}
+
+#detailPagina main section:nth-of-type(2) svg {
+	transform: scale(.9);
+	fill: rgb(175, 175, 175);
+	transition: .4s;
+	background: none;
+	cursor: pointer;
+}
+
+#detailPagina main section:nth-of-type(2) i:hover svg {
+	transform: scale(1.1);
+	fill: rgb(243, 156, 17);
+	transition: .4s;
+}
+
+#detailPagina main section:nth-of-type(2) span {
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+#detailPagina main section:nth-of-type(2) ul:nth-of-type(2) {
+	padding: 0;
+}
+
+#detailPagina table td h3 {
+	width: fit-content;
+	margin: 0;
+}
+
 /* einde tekst  */
 
 /* aantal kopen met knop  */
-#detailPagina section:nth-of-type(4){
-  height: 8em;
-}
-#detailPagina section:nth-of-type(4) input{
-height: 4em;
-padding: .3em .95em;
-width: 6em;
-text-align: center;
-}
-#detailPagina section:nth-of-type(4) label{
-  position: relative;
-  top: 1em;
-}
-fieldset:first-of-type button{
-  background:none;
-  outline: none;
-}
-fieldset:first-of-type{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: fit-content;
-  border: none;
+
+#detailPagina section:nth-of-type(4) {
+	height: 8em;
 }
 
-#detailPagina section:nth-of-type(4) span{
-  display: grid;
-  grid-template-rows: 2;
-  width: 1em;
-}
-#detailPagina span button:first-of-type svg:first-of-type{
-  transform: rotate(180deg);
+#detailPagina section:nth-of-type(4) input {
+	height: 4em;
+	padding: .3em .95em;
+	width: 6em;
+	text-align: center;
 }
 
-form > button{
-  margin-top: 1em;
-  height: 3.5em;
-  width: 27em;
-  background-color: black;
-  color: white;
+#detailPagina section:nth-of-type(4) label {
+	position: relative;
+	top: 1em;
 }
 
-#detailPagina span button svg{
-  width: 1em;
-  height: auto;
+fieldset:first-of-type button {
+	background: none;
+	outline: none;
+}
+
+fieldset:first-of-type {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: fit-content;
+	border: none;
+}
+
+#detailPagina section:nth-of-type(4) span {
+	display: grid;
+	grid-template-rows: 2;
+	width: 1em;
+}
+
+#detailPagina span button:first-of-type svg:first-of-type {
+	transform: rotate(180deg);
+}
+
+form>button {
+	margin-top: 1em;
+	height: 3.5em;
+	width: 27em;
+	background-color: black;
+	color: white;
+}
+
+#detailPagina span button svg {
+	width: 1em;
+	height: auto;
 }
 
 #detailPagina input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
-input[type=number]{
-  -moz-appearance:textfield;
+
+input[type=number] {
+	-moz-appearance: textfield;
 }
+
 /* einde aantal kopen met knop */
 
 /* productkenmerken  */
-#detailPagina main section:nth-of-type(5){
-  margin: 0em;
-}
-#detailPagina main section:nth-of-type(5) table h4{
-color: black;
-cursor: default;
+
+#detailPagina main section:nth-of-type(5) {
+	margin: 0em;
 }
 
-#detailPagina main section:nth-of-type(5){
-  display: block;
-  position: relative;
+#detailPagina main section:nth-of-type(5) table h4 {
+	color: black;
+	cursor: default;
 }
 
-#detailPagina main section:nth-of-type(5) table p{
-  background: #ebebeb;
-  margin: 0;
-  padding: 10px;
-  min-height: 40px;
-  min-width: 20vw;
-  max-width: 50vw;
-  font-size: .8em;
-  word-break: break-all;
-}
-#detailPagina main section:nth-of-type(5) tr:nth-child(odd) p{
- background: #f6f6f6;
+#detailPagina main section:nth-of-type(5) {
+	display: block;
+	position: relative;
 }
 
-#detailPagina section:nth-of-type(5){
-  position: relative;
-  padding-top: 4em;
+#detailPagina main section:nth-of-type(5) table p {
+	background: #ebebeb;
+	margin: 0;
+	padding: 10px;
+	min-height: 40px;
+	min-width: 20vw;
+	max-width: 50vw;
+	font-size: .8em;
+	word-break: break-all;
 }
 
-#detailPagina section:nth-of-type(5) table{
-  padding-top: 0em;
+#detailPagina main section:nth-of-type(5) tr:nth-child(odd) p {
+	background: #f6f6f6;
 }
 
-#detailPagina section:nth-of-type(5) article,#detailPagina section:nth-of-type(5) > a{
-  display: none;
+#detailPagina section:nth-of-type(5) {
+	position: relative;
+	padding-top: 4em;
 }
 
-#detailPagina section:nth-of-type(5) > a:hover{
-  color: rgb(243, 156, 17);
-  cursor: pointer;
-}
-#detailPagina section:nth-of-type(5) ul li:first-of-type{
-  border-right: white solid 1px;
-  border-left: rgb(243, 156, 17) solid 8px;
-  color:  rgb(243, 156, 17);
-}
-#detailPagina section:nth-of-type(5) article p,#detailPagina section:nth-of-type(5) div h5{
-  font-weight: 600;
-  margin: 0;
-  width: fit-content;
-}
-#detailPagina section:nth-of-type(5) ul li{
-  padding: 1em 10em 1em 1em;
-  border: black solid 1px;
-  background-color: white;
-  cursor: pointer;
-}
-#detailPagina section:nth-of-type(5) article h5,
-#detailPagina section:nth-of-type(5) article p{
-  margin: 0em;
-  padding: 0em;
+#detailPagina section:nth-of-type(5) table {
+	padding-top: 0em;
 }
 
-#detailPagina section:nth-of-type(6) article{
-margin-bottom: 4em;
-}
-#detailPagina section:nth-of-type(5) ul{
-  padding-left: 0;
-}
-#detailPagina > section{
-display: none;
-}
-#detailPagina main section:nth-of-type(6){
-  width: 95vw;
-  grid-template-columns:repeat(auto-fit, minmax(18em, 20em));
-}
-@media screen and (min-width: 780px){
-
-#detailPagina main section:first-of-type{
-  position: absolute;
-}
-#detailPagina main section:nth-of-type(2){
-  position: relative;
-  left: 45vw;
-}
-#detailPagina main section:first-of-type > img{
-  width: 40vw;
-}
-#detailPagina main section:nth-of-type(2) p{
-  margin-left: 0;
-  max-width: 45vw;
-}
-#detailPagina main section:nth-of-type(2) table{
-  margin-left: 0;
-}
-#detailPagina main section:nth-of-type(4){
-  position: relative;
-  left: 45vw;
-  justify-content: left;
-}
-#detailPagina h2{
-  margin-top: -4em;
-}
-#detailPagina section:nth-of-type(5) table,
 #detailPagina section:nth-of-type(5) article,
-#detailPagina section:nth-of-type(5) > a{
-  border: black solid 1px;
-  padding: 2em;
-  transform: translateX(25.9em) translateY(-12em);
-}
-#detailPagina section:nth-of-type(5) ul{
-  padding: 0;
-  z-index: 1;
-  width: 21em;
-  position: relative;
-  margin-left: 2em;
-  margin-top: 0em;
-  transform: translateX(3em);
-}
-#detailPagina section:nth-of-type(5) article{
-  padding-bottom: 5.05em;
-  width: 50vw;
-}
-#detailPagina section:nth-of-type(5) article a:hover p{
-cursor: pointer;
-color:  rgb(243, 156, 17);
-}
-#detailPagina section:nth-of-type(5) > a{
-  padding-bottom: 7.4em;
-  width: 50vw;
-}
-#detailPagina > section{
-  display: block;
-}
-#detailPagina > section img{
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 2em;
-}
+#detailPagina section:nth-of-type(5)>a {
+	display: none;
 }
 
+#detailPagina section:nth-of-type(5)>a:hover {
+	color: rgb(243, 156, 17);
+	cursor: pointer;
+}
+
+#detailPagina section:nth-of-type(5) ul li:first-of-type {
+	border-right: white solid 1px;
+	border-left: rgb(243, 156, 17) solid 8px;
+	color: rgb(243, 156, 17);
+}
+
+#detailPagina section:nth-of-type(5) article p,
+#detailPagina section:nth-of-type(5) div h5 {
+	font-weight: 600;
+	margin: 0;
+	width: fit-content;
+}
+
+#detailPagina section:nth-of-type(5) ul li {
+	padding: 1em 10em 1em 1em;
+	border: black solid 1px;
+	background-color: white;
+	cursor: pointer;
+}
+
+#detailPagina section:nth-of-type(5) article h5,
+#detailPagina section:nth-of-type(5) article p {
+	margin: 0em;
+	padding: 0em;
+}
+
+#detailPagina section:nth-of-type(6) article {
+	margin-bottom: 4em;
+}
+
+#detailPagina section:nth-of-type(5) ul {
+	padding-left: 0;
+}
+
+/* einde productkenmerken  */
+
+/* aaanbevolen artikelen  */
+
+#detailPagina>section {
+	display: none;
+}
+
+#detailPagina main section:nth-of-type(6) {
+	width: 95vw;
+	grid-template-columns: repeat(auto-fit, minmax(18em, 20em));
+}
+
+/* einde aanbevolen artikelen  */
+
+/* detailpagina responsive  */
+
+@media screen and (min-width: 780px) {
+	#detailPagina main section:first-of-type {
+		position: absolute;
+	}
+	#detailPagina main section:nth-of-type(2) {
+		position: relative;
+		left: 45vw;
+	}
+	#detailPagina main section:first-of-type>img {
+		width: 40vw;
+	}
+	#detailPagina main section:nth-of-type(2) p {
+		margin-left: 0;
+		max-width: 45vw;
+	}
+	#detailPagina main section:nth-of-type(2) table {
+		margin-left: 0;
+	}
+	#detailPagina main section:nth-of-type(4) {
+		position: relative;
+		left: 45vw;
+		justify-content: left;
+	}
+	#detailPagina h2 {
+		margin-top: -4em;
+	}
+	#detailPagina section:nth-of-type(5) table,
+	#detailPagina section:nth-of-type(5) article,
+	#detailPagina section:nth-of-type(5)>a {
+		border: black solid 1px;
+		padding: 2em;
+		transform: translateX(25.9em) translateY(-12em);
+	}
+	#detailPagina section:nth-of-type(5) ul {
+		padding: 0;
+		z-index: 1;
+		width: 21em;
+		position: relative;
+		margin-left: 2em;
+		margin-top: 0em;
+		transform: translateX(3em);
+	}
+	#detailPagina section:nth-of-type(5) article {
+		padding-bottom: 5.05em;
+		width: 50vw;
+	}
+	#detailPagina section:nth-of-type(5) article a:hover p {
+		cursor: pointer;
+		color: rgb(243, 156, 17);
+	}
+	#detailPagina section:nth-of-type(5)>a {
+		padding-bottom: 7.4em;
+		width: 50vw;
+	}
+	#detailPagina>section {
+		display: block;
+	}
+	#detailPagina>section img {
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 2em;
+	}
+}
+
+/* einde detailpagina  */
